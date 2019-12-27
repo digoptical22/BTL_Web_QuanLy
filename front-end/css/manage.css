@@ -3,6 +3,9 @@ border: 0;
 padding: 0;
 margin: 0;
 }
+body{
+	font-family: 'Kanit', sans-serif;
+}
 header{
 	height: 100px !important;
 	width: 100% !important;
@@ -15,7 +18,7 @@ div.container nav.navbar a.navbar-brand img{
 	width: 150px;
 	height: 100px;
 	position: relative;
-	left: 100px;
+	left: 80px;
 }
 div.container nav.navbar{
 	display: flex;
@@ -80,6 +83,25 @@ main div.container div.pagination{
 main div.container select{
 	border: 1px solid black;
 	padding: 10px;
+	margin-top: 10px;
+}
+main div.container button.btnInsert{
+	padding: 10px;
+	margin-bottom: 10px;
+}
+main div.container div.col-6 form button.btnInsert-1{
+	padding: 5px 20px;
+	margin-left: 230px;
+	margin-bottom: 10px;
+}
+main div.container div.col-6{
+	background: rgba(0, 0, 0, 0.5);	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+main div.container div.col-6 form h1{
+	color: white;
+	text-align: center;
 }
 footer{
 	width: 100% !important;

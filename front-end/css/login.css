@@ -17,11 +17,17 @@ body a{
 	transition: 0.5s all;
 	text-decoration: none;
 }
-div.container{
+div.container div.form-forgotPass{
+	background: rgba(0, 0, 0, 0.5);
+	width: 500px;
+	height: 250px;
+	margin: 50px auto;
+}
+div.container div.form{
 	background: rgba(0, 0, 0, 0.5);
 	width: 500px;
 	height: 430px;
-	margin-top: 50px;
+	margin: 50px auto;
 }
 div.container img{
 	width: 150px;
@@ -91,11 +97,17 @@ div.container form div.create-account p a{
 div.container form div.create-account a:hover{
 	color: #537b35;
 }
-div.container form button.btn{
+div.container form button.btn_login{
 	padding: 5px 20px !important;
 	position: relative;
 	left: 200px;
 }
-
+div.container form h3{
+	color: white;
+}
+div.container form button.changePassWord{
+	position: relative;
+	left: 100px;
+}
 
 
