@@ -1,0 +1,53 @@
+*{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-image: url('../img/b2.jpg');
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	font-family: 'Kanit', sans-serif;
+}
+form{
+	width: 500px;
+	height: 500px;
+	margin: 20px auto;
+	background: rgba(0, 0, 0, 0.5);
+}
+div.container form h1{
+	color: white;
+	text-align: center;
+}
+div.container form button.btn{
+	padding: 5px 20px !important;
+	position: relative;
+	left: 180px;
+	margin-top: 10px;
+}
+div.container form input{
+	border-radius: 10px;
+}
+div.container nav div.collapse ul li a{
+	float: right;
+}
+div.container nav{
+	height: 50px;
+	padding-top: 10px;
+}
+div.container nav a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #ffffff;
+}
+div.container nav a.login{
+	float: right;
+}
+div.container form div.container-fluid select{
+	margin-left: 80px;
+}
+
