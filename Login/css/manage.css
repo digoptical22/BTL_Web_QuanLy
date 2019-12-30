@@ -1,0 +1,177 @@
+*{
+border: 0;
+padding: 0;
+margin: 0;
+}
+body{
+	font-family: 'Kanit', sans-serif;
+}
+header{
+	height: 100px !important;
+	width: 100% !important;
+}
+header div.container div.content{
+	text-align: center;
+	color: #0963FE;
+} 
+div.container nav.navbar a.navbar-brand img{
+	width: 150px;
+	height: 100px;
+	position: relative;
+	left: 80px;
+}
+div.container nav.navbar{
+	display: flex;
+}
+
+nav div.container nav.navbar div.content-left ul li{
+	margin-right: 30px;
+}
+nav div.container nav.navbar div.content-right ul li{
+	margin-left: 30px;
+}
+main{
+	min-height: 500px !important;
+	width: 100% !important;
+}
+main div.container div.row {
+	display: flex;
+}
+main div.container div.row div.banner-left{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+main div.container div.row div.banner-left div.box{
+	width: 100%;
+	height: 300px;
+	border: 1px solid blue;
+	border-radius: 5px;
+}
+main div.container div.row div.banner-left div.box-1{
+	width: 100%;
+	height: 200px;
+	border: 1px solid blue;
+	border-radius: 5px;
+}
+
+main div.container div.row div.banner-left div.box div.boxTitle{
+	text-align: center;
+	padding: 5px;
+}
+main div.container div.row div.banner-left{
+	height: 500px;
+	border-right: 1px solid #E6E2EB;
+}
+main div.container div.row div.banner-right a{
+	text-decoration: none;
+}
+/* css table */
+main div.containerfluid table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+main div.container-fluid td a{
+	text-decoration: none;
+}
+main div.container-fluid thead, td {
+  padding: 10px;
+}
+/* css table */
+main div.container-fluid div.pagination{
+	margin-left: 450px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+main div.container-fluid select{
+	border: 1px solid black;
+	padding: 10px;
+	margin-top: 10px;
+}
+main div.container-fluid a button.btnInsert{
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+main div.container div.col-6 form button.btnInsert-1{
+	padding: 5px 20px;
+	margin-left: 220px;
+	margin-bottom: 10px;
+}
+/* end css table */
+main div.container div.col-6{
+	background: rgba(0, 0, 0, 0.5);	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+main div.container div.col-6 form h1{
+	color: white;
+	text-align: center;
+}
+/* css Tìm kiếm ngành */
+main div.container-fluid input.findMajor{
+	border: 1px solid #ccc3c3;
+	padding: 5px;
+}
+main div.container-fluid div.input-row{
+	float: right;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+main div.container-fluid div.input-row button[type=submit]{
+	padding: 4px;
+	background-color: #f4efef;
+	color: black;
+}
+main div.container-fluid div.input-row input{
+	border: 1px solid  #ccc3c3;
+}
+main div.container-fluid  button.findMajor{
+	padding: 10px;
+}
+/* css Quản Lý Giảng Viên */
+/* css Lớp Học Phần */
+div.container-fluid div.select{
+ 	display: flex;
+ 	margin-left: 100px;
+ 	height: 100px;
+
+}
+div.container-fluid div.select-2{
+	margin-left: 10px;
+}
+div.container-fluid div.select-3{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+div.container-fluid div.select-3 input{
+	padding: 10px;
+	border: 1px solid black;
+}
+div.container-fluid div.select-4{
+	margin-top: 15px;
+}
+div.container-fluid div.select-4 button.btnLopHocPhan{
+	padding: 5px 10px;
+	margin-left: 10px;
+}
+footer{
+	width: 100% !important;
+	height: 50px !important;
+}
+footer div.container{
+	display: flex;
+} 
+footer div.container div.footer h3{
+	color: #eaebf2 !important;
+}
+/* footer div.container div.footer-right{
+	float: right;
+} */
+footer div.container div.footer-right a img{
+	width: 30px !important;
+	height: 30px !important;
+	float: right;
+	margin-left: 30px;
+}
+/* xong css của manage */
+/* css của Giảng Viên */

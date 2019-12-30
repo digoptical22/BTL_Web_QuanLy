@@ -25,15 +25,15 @@
 					<div class="collapse navbar-collapse " id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link " href="quanlynganhhoc.php">Quản Lý Ngành Học</a>
+								<a class="nav-link active bg-secondary" href="quanlymonhoc.html">Quản Lý Ngành Học</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Xếp Thời Khóa Biểu</a>
+								<a class="nav-link" href="LopHocPhan.php">Lớp Học Phần</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<a class="navbar-brand" href="manage.html"><img src="../img/60.png" alt=""></a>
+				<a class="navbar-brand" href="manage.php"><img src="../img/60.png" alt=""></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -41,10 +41,10 @@
 					<div class="collapse navbar-collapse content-right" id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link active bg-secondary" href="quanlygiangvien.php">Quản lý thông tin giảng viên</a>
+								<a class="nav-link" href="quanlygiangvien.php">Quản lý thông tin giảng viên</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="login.php">Đăng Xuất</a>
+								<a class="nav-link" href="login.html">Đăng Xuất</a>
 							</li>
 						</ul>
 					</div>
@@ -53,24 +53,13 @@
 		</div>
 	</nav>
 	<main>
-
-		<div class="container">
-			<h1 align="center">[Thông Tin Chi Tiết Giảng Viên]</h1><select name="" id="" class="mb-5">
-				<option value="0">Công Nghệ Thông Tin</option>
-				<option value="1">Kinh Tế</option>
-				<option value="2">Công Trình Thủy</option>
-				<option value="3">Thủy Văn Học</option>
-				<option value="4">Kỹ Thuật Xây Dựng Công Trình Thủy</option>
-				<option value="5">Kỹ thuật hóa học  </option>
-				<option value="6">
-				Công nghệ sinh học</option>
-				<option value="7">Kỹ thuật trắc địa - bản đồ</option>
-			</select>
-			<br><a href="themgiangvien.html"><button  type="btn" class="btnInsert">Thêm Mới</button></a>
+		<div class="container-fluid ">
+			<h1 align="center">[Thông Tin Chi Tiết]</h1>
+			<input type="text" placeholder="Chọn Ngành" class="findMajor"> <button type="btn" class="findMajor">Tìm kiếm</button> 
 			<form class="form-horizontal" action="" method="post" name="uploadCSV"
 				enctype="multipart/form-data">
 				<div class="input-row">
-					<label class="col-md-4 control-label">Choose CSV File</label> <input
+<!-- 					<label class="col-md-4 control-label">Choose CSV File</label> --> <input
 					type="file" name="file" id="file" accept=".csv">
 					<button type="submit" id="submit" name="import"
 					class="btn-submit">Import</button>
@@ -82,12 +71,8 @@
 				<thead>
 					<tr>
 						<td>STT</td>
-						<td>Mã Giảng Viên</td>
-						<td>Tên Giảng Viên</td>
-						<td>Email</td>
-						<td>Đia Chỉ</td>
-						<td>SĐT</td>
-						<td>Permisson</td>
+						<td>Mã Ngành</td>
+						<td>Tên Ngành</td>
 						<td><a href="#"></a></td>
 						<td><a href="#"></a></td>
 					</tr>
@@ -95,68 +80,98 @@
 				<tbody>
 					<tr>
 						<td>1</td>
-						<td>GV01</td>
-						<td>Kiều Tuấn Dũng</td>
-						<td>kitudutlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0929283742</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>TLA201</td>
+						<td>
+						Chương trình tiên tiến ngành Kỹ thuật xây dựng (Hợp tác với Đại học Arkansas, Hoa Kỳ, học bằng Tiếng Anh)</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
-						<td>GV02</td>
-						<td>Trần Mạnh Tuấn</td>
-						<td>tranmanhtuantlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0987777666</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>2</td>
+						<td>TLA202</td>
+						<td>
+						Chương trình tiên tiến ngành Kỹ thuật tài nguyên nước (Hợp tác với Đại học bang Colorado, Hoa Kỳ, học bằng Tiếng Anh)</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
-						<td>GV03</td>
-						<td>Nguyễn Thị Ngân</td>
-						<td>ngantlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0988888666</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>3</td>
+						<td>TLA101</td>
+						<td>
+						Kỹ thuật xây dựng công trình thủy</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
-						<td>GV04</td>
-						<td>Trương Xuân Nam</td>
-						<td>truongxuannamtlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>098999666</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>4</td>
+						<td>TLA104</td>
+						<td>
+						Kỹ thuật xây dựng</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
-						<td>GV05</td>
-						<td>Nguyễn Quỳnh Diệp</td>
-						<td>nguyenquynhdieptlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0987777999</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>5</td>
+						<td>TLA111</td>
+						<td>
+						Công nghệ kỹ thuật xây dựng</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
-						<td>GV06</td>
-						<td>Lý Anh Tuấn</td>
-						<td>lyanhtuantlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0987777111</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>6</td>
+						<td>TLA113</td>
+						<td>
+						Kỹ thuật xây dựng công trình giao thông</td>
+						<td><a href="UpdateMajo.php">Cập Nhật</a></td>
+						<td><a href="#">Xóa</a></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>TLA114</td>
+						<td>
+						Quản lý xây dựng</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
+						<td><a href="#">Xóa</a></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>TLA102</td>
+						<td>
+						Kỹ thuật tài nguyên nước</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
+						<td><a href="#">Xóa</a></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>TLA107</td>
+						<td>
+						Kỹ thuật cấp thoát nước</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
+						<td><a href="#">Xóa</a></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>TLA110</td>
+						<td>
+						Kỹ thuật cơ sở hạ tầng</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
+						<td><a href="#">Xóa</a></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>TLA103</td>
+						<td>
+						Thuỷ văn học</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
+						<td><a href="#">Xóa</a></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>TLA109</td>
+						<td>
+						Kỹ thuật môi trường</td>
+						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 				</tbody>
@@ -186,14 +201,14 @@
 			</div>
 		</div>
 	</footer>
-	<script src="js/jquery-3.4.1.js" type="text/javascript"> </script>
-	<script src="js/popper.min.js" type="text/javascript"></script>
+	<script src="../js/jquery-3.4.1.js" type="text/javascript"> </script>
+	<script src="../js/popper.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	$(document).ready(
-	function() {
-		$("#frmCSVImport").on(
-		"submit",
+		$(document).ready(
 		function() {
+			$("#frmCSVImport").on(
+			"submit",
+			function() {
 
 			$("#response").attr("class", "");
 			$("#response").html("");
@@ -211,9 +226,6 @@
 			return true;
 		});
 	});
-</script>
-</body>
-</html>
-
+	</script>
 </body>
 </html>

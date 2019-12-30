@@ -37,8 +37,65 @@ div.container form div.form-group{
 	margin-top: 20px;
 }
 div.container form div.form-check input[type="checkbox"]{
+	display: none;
+}
+div.container form div.form-check input[type="checkbox"]+label{
+	position: relative;
+	padding-left: 10px;
 	border: #F0F8FF;
 	display: inline-block;
 	font-size: 15px;
     color: #fff;
 }
+div.container form div.form-check input[type="checkbox"]+label span{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	border: 2px solid #537b35;
+	position: absolute;
+	top: 3px;
+	left: -10px;
+	bottom: 4px;
+}
+div.container form div.form-check input[type="checkbox"]:checked+label span:before{
+	content: "";
+	background: url(../img/tick.png)no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 1px;
+	font-size: 15px;
+	width: 10px;
+	height: 10px;
+} 
+div.container form div.form-check a{
+	float: right;
+
+	color: #ffffff;
+	text-decoration: none;
+}
+div.container form div.form-check a:hover{
+	color: #537b35; 
+}
+div.container form div.create-account{
+	height: 50px;
+	color: #ffffff;
+	text-align: center;
+}
+
+div.container form div.create-account p a{
+	color: #ffffff;
+	padding: 10px 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+}
+div.container form div.create-account a:hover{
+	color: #537b35;
+}
+div.container form button.btn{
+	padding: 5px 20px !important;
+	position: relative;
+	left: 200px;
+}
+
+
+

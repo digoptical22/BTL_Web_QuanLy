@@ -1,0 +1,47 @@
+div.container-fluid div.lopGiangVien{
+	margin-left: 10px;
+}
+div.container-fluid div.select-5{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+div.container-fluid div.select-5 input{
+	padding: 10px;
+	border: 1px solid black;
+}
+div.container-fluid div.news {
+	width: 500px;
+	height: 400px;
+	margin: 40px auto;
+	background: rgba(0, 0, 0, 0.5);
+}
+div.container-fluid div.news form input,textarea{
+	padding: 10px;
+	border: 1px solid black;
+}
+div.container-fluid div.news form button{
+	padding: 10px 20px;
+	margin-left: 200px;
+	margin-top: 20px;
+}
+div.container-fluid div.news form button:hover{
+	background-color: #40f978;
+	border-radius: 5px;
+}
+div.container form{
+	width: 600px;
+	height: 600px;
+	margin: 40px auto;
+}
+div.container form div.update button.btn-update{
+	padding: 10px 20px;
+	margin-left: 250px;
+}
+/* admin */
+nav div.container nav.navbar a.admin img{
+	margin-left: 200px;
+}
+div.container-fluid table tbody tr td input{
+	border: 1px solid black;
+	padding: 5px ;
+}

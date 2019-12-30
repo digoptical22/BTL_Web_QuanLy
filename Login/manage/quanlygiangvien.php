@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Quản Lý Ngành Học</title>
+	<title>Quản Lý Giảng Viên</title>
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/manage.css">
 	<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
@@ -28,12 +27,12 @@
 								<a class="nav-link " href="quanlynganhhoc.php">Quản Lý Ngành Học</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Xếp Thời Khóa Biểu</a>
+								<a class="nav-link" href="LopHocPhan.php">Lớp Học Phần</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<a class="navbar-brand" href="manage.html"><img src="../img/60.png" alt=""></a>
+				<a class="navbar-brand" href="manage.php"><img src="../img/60.png" alt=""></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -53,8 +52,7 @@
 		</div>
 	</nav>
 	<main>
-
-		<div class="container">
+		<div class="container-fluid">
 			<h1 align="center">[Thông Tin Chi Tiết Giảng Viên]</h1><select name="" id="" class="mb-5">
 				<option value="0">Công Nghệ Thông Tin</option>
 				<option value="1">Kinh Tế</option>
@@ -66,11 +64,11 @@
 				Công nghệ sinh học</option>
 				<option value="7">Kỹ thuật trắc địa - bản đồ</option>
 			</select>
-			<br><a href="themgiangvien.html"><button  type="btn" class="btnInsert">Thêm Mới</button></a>
+			<br><a href="themgiangvien.php"><button  type="btn" class="btnInsert">Thêm Mới</button></a>
 			<form class="form-horizontal" action="" method="post" name="uploadCSV"
 				enctype="multipart/form-data">
 				<div class="input-row">
-					<label class="col-md-4 control-label">Choose CSV File</label> <input
+					<input
 					type="file" name="file" id="file" accept=".csv">
 					<button type="submit" id="submit" name="import"
 					class="btn-submit">Import</button>
@@ -86,10 +84,11 @@
 						<td>Tên Giảng Viên</td>
 						<td>Email</td>
 						<td>Đia Chỉ</td>
+						<td>Giới Tính</td>
 						<td>SĐT</td>
-						<td>Permisson</td>
-						<td><a href="#"></a></td>
-						<td><a href="#"></a></td>
+						<td>Chức Vụ</td>
+						<td></td>
+						<td></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -97,66 +96,60 @@
 						<td>1</td>
 						<td>GV01</td>
 						<td>Kiều Tuấn Dũng</td>
-						<td>kitudutlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0929283742</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>kitudi@tlu.edu.vn</td>
+						<td>Bắc Nính</td>
+						<td>Nam</td>
+						<td>0969888888</td>
+						<td>Giảng Viên</td>
+						<td><a href="UpdateGiangVien.php">Chỉnh Sửa</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
+						<td>2</td>
 						<td>GV02</td>
 						<td>Trần Mạnh Tuấn</td>
-						<td>tranmanhtuantlu@wru.vn</td>
+						<td>tranmanhtuan@tlu.edu.vn</td>
 						<td>Hà Nội</td>
-						<td>0987777666</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>Nam</td>
+						<td>090909090</td>
+						<td>Trưởng Khoa</td>
+						<td><a href="UpdateGiangVien.php">Chỉnh Sửa</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
+						<td>3</td>
 						<td>GV03</td>
-						<td>Nguyễn Thị Ngân</td>
-						<td>ngantlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0988888666</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>GV04</td>
 						<td>Trương Xuân Nam</td>
-						<td>truongxuannamtlu@wru.vn</td>
+						<td>truongxuannam@tlu.edu.vn</td>
 						<td>Hà Nội</td>
-						<td>098999666</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>Nam</td>
+						<td>0968686866</td>
+						<td>Giảng Viên</td>
+						<td><a href="UpdateGiangVien.php">Chỉnh Sửa</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 					<tr>
-						<td>1</td>
+						<td>4</td>
+						<td>GV04</td>
+						<td>Nguyễn Thị Ngân</td>
+						<td>nguyenthingan@tlu.edu.vn</td>
+						<td>Hà Nội</td>
+						<td>Nữ</td>
+						<td>0988777722</td>
+						<td>Giảng Viên</td>
+						<td><a href="UpdateGiangVien.php">Chỉnh Sửa</a></td>
+						<td><a href="#">Xóa</a></td>
+					</tr>
+					<tr>
+						<td>5</td>
 						<td>GV05</td>
 						<td>Nguyễn Quỳnh Diệp</td>
-						<td>nguyenquynhdieptlu@wru.vn</td>
+						<td>nguyenquynhdiep@tlu.edu.vn</td>
 						<td>Hà Nội</td>
-						<td>0987777999</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>GV06</td>
-						<td>Lý Anh Tuấn</td>
-						<td>lyanhtuantlu@wru.vn</td>
-						<td>Hà Nội</td>
-						<td>0987777111</td>
-						<td>1</td>
-						<td><a href="#">Chỉnh Sửa</a></td>
+						<td>Nữ</td>
+						<td>099966622</td>
+						<td>Giảng Viên</td>
+						<td><a href="UpdateGiangVien.php">Chỉnh Sửa</a></td>
 						<td><a href="#">Xóa</a></td>
 					</tr>
 				</tbody>
@@ -186,34 +179,30 @@
 			</div>
 		</div>
 	</footer>
-	<script src="js/jquery-3.4.1.js" type="text/javascript"> </script>
-	<script src="js/popper.min.js" type="text/javascript"></script>
+	<script src="../js/jquery-3.4.1.js" type="text/javascript"> </script>
+	<script src="../js/popper.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	$(document).ready(
-	function() {
-		$("#frmCSVImport").on(
-		"submit",
+		$(document).ready(
 		function() {
-
-			$("#response").attr("class", "");
-			$("#response").html("");
-			var fileType = ".csv";
-			var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+("
-					+ fileType + ")$");
-			if (!regex.test($("#file").val().toLowerCase())) {
-				$("#response").addClass("error");
-				$("#response").addClass("display-block");
-				$("#response").html(
-						"Invalid File. Upload : <b>" + fileType
-								+ "</b> Files.");
-				return false;
-			}
-			return true;
+			$("#frmCSVImport").on(
+			"submit",
+			function() {
+				$("#response").attr("class", "");
+				$("#response").html("");
+				var fileType = ".csv";
+				var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+("
+				+ fileType + ")$");
+				if (!regex.test($("#file").val().toLowerCase())) {
+					$("#response").addClass("error");
+					$("#response").addClass("display-block");
+					$("#response").html(
+					"Invalid File. Upload : <b>" + fileType
+					+ "</b> Files.");
+						return false;
+					}
+					return true;
+			});
 		});
-	});
-</script>
-</body>
-</html>
-
+	</script>
 </body>
 </html>
