@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Update Major</title>
+	<title>Manage Page</title>
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/manage.css">
 	<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
@@ -29,18 +29,19 @@
 									Quản Lý Ngành Học
 									</button>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item" href="#">Xem Ngành học</a>
-										<a class="dropdown-item" href="#">Lớp Môn Học</a>
+										<a class="dropdown-item" href="quanlynganhhoc.php">Xem Ngành học</a>
+										<a class="dropdown-item" href="quanlymonhoc.php">Lớp Học Theo Ngành</a>
+										<a class="dropdown-item" href="monhoctheonganh.php">Tạo Lớp Học Theo Ngành</a>
 									</div>
 								</div>
 							<li class="nav-item">
 								<div class="dropdown">
 									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Lớp Môn Học
+									Lớp Học Phần
 									</button>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item" href="#">Thông tin lớp môn học</a>
-										<a class="dropdown-item" href="#">Thời Gian Học</a>
+										<a class="dropdown-item" href="lopmonhoc.php">Thông tin các lớp môn học</a>
+										<a class="dropdown-item" href="quanlythoigian.php">Thời Gian Học</a>
 									</div>
 								</div>
 							</li>
@@ -60,7 +61,7 @@
 									Quản lý giảng viên
 									</button>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item" href="#">Xem Giảng Viên</a>
+										<a class="dropdown-item" href="quanlygiangvien.php">Xem Giảng Viên</a>
 										<!-- <a class="dropdown-item" href="#"></a>
 										<a class="dropdown-item" href="#">Something else here</a> -->
 									</div>
@@ -84,30 +85,7 @@
 		</div>
 	</nav>
 	<main>
-		<div class="container">
-			<div class="row">
-				<div class="col-3"></div>
-				<div class="col-6">
-					<form action="register.php" method="post" name="loginForm" id="loginForm">
-						<h1>Cập Nhật</h1>
-						<hr>
-						<div class="container-fluid">
-							<div class="form-group mb-3">
-								<label for="exampleInputEmail1">Mã Ngành</label>
-								<input name="userName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mã Ngành">
-							</div>
-							<div class="form-group mb-3">
-								<label for="ExampleInputEmail1">Tên Ngành</label>
-								<input name="userName" type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Tên Ngành">
-							</div>
-						</div>
-						<hr>
-						<button type="submit" class="btn btn-success btnInsert-1">Cập Nhật</button>
-					</form>
-				</div>
-				<div class="col-3"></div>
-			</div>
-		</div>
+		
 	</main>
 	<footer>
 		<div class="container bg-light">
@@ -115,13 +93,13 @@
 				<h3>&copy;- Trường Đại Học Thủy Lợi</h3>
 			</div>
 			<div class="footer-right w-50 mt-2 ">
-				<a href="https://www.facebook.com/daihocthuyloi1959/?fref=ts"><img src="../img/facebook.png" alt=""></a>
-				<a href="https://www.youtube.com/user/daihocthuyloi"><img src="../img/youtube (1).png" alt=""></a>
-				<a href="https://twitter.com/Daihocthuyloihn"><img src="../img/twitter.png" alt=""></a>
+				<a href="https://www.facebook.com/daihocthuyloi1959/?fref=ts"><img src="img/facebook.png" alt=""></a>
+				<a href="https://www.youtube.com/user/daihocthuyloi"><img src="img/youtube (1).png" alt=""></a>
+				<a href="https://twitter.com/Daihocthuyloihn"><img src="img/twitter.png" alt=""></a>
 			</div>
 		</div>
 	</footer>
-	<script src="../js/jquery-3.4.1.js" type="text/javascript"> </script>
+	<script src="../js/jquery-3.4.1.js" title="text/javascript"></script>
 	<script src="../js/popper.min.js" type="text/javascript"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript">
@@ -130,4 +108,4 @@
 });
 	</script>
 </body>
-</html>
+</html>s

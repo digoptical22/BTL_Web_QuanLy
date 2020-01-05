@@ -1,4 +1,15 @@
-
+<?php require_once("msqli_connection.php"); ?>
+<?php
+	$sql = 'SELECT * from major';
+	$query = mysqli_query($conn,$sql); 
+?>
+<?php
+	if (isset($_GET["id_delete"])) {
+		$sql = "DELETE FROM major WHERE idMajor = ".$_GET["id_delete"];
+		mysqli_query($conn,$sql);
+	}
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,10 +36,25 @@
 					<div class="collapse navbar-collapse " id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link active bg-secondary" href="quanlymonhoc.html">Quản Lý Ngành Học</a>
-							</li>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Quản Lý Ngành Học
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Xem Ngành học</a>
+										<a class="dropdown-item" href="#">Lớp Môn Học</a>
+									</div>
+								</div>
 							<li class="nav-item">
-								<a class="nav-link" href="LopHocPhan.php">Lớp Học Phần</a>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Lớp Môn Học
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Thông tin lớp môn học</a>
+										<a class="dropdown-item" href="#">Thời Gian Học</a>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -41,10 +67,27 @@
 					<div class="collapse navbar-collapse content-right" id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="quanlygiangvien.php">Quản lý thông tin giảng viên</a>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Quản lý giảng viên
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Xem Giảng Viên</a>
+										<!-- <a class="dropdown-item" href="#"></a>
+										<a class="dropdown-item" href="#">Something else here</a> -->
+									</div>
+								</div>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="login.html">Đăng Xuất</a>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									...
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Profile</a>
+										<a class="dropdown-item" href="#">log-out</a>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -56,6 +99,8 @@
 		<div class="container-fluid ">
 			<h1 align="center">[Thông Tin Chi Tiết]</h1>
 			<input type="text" placeholder="Chọn Ngành" class="findMajor"> <button type="btn" class="findMajor">Tìm kiếm</button> 
+			<br>
+			<a href="NewMajors.php" class="newMajor">Thêm Mới</a>
 			<form class="form-horizontal" action="" method="post" name="uploadCSV"
 				enctype="multipart/form-data">
 				<div class="input-row">
@@ -78,102 +123,24 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>1</td>
-						<td>TLA201</td>
-						<td>
-						Chương trình tiên tiến ngành Kỹ thuật xây dựng (Hợp tác với Đại học Arkansas, Hoa Kỳ, học bằng Tiếng Anh)</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>TLA202</td>
-						<td>
-						Chương trình tiên tiến ngành Kỹ thuật tài nguyên nước (Hợp tác với Đại học bang Colorado, Hoa Kỳ, học bằng Tiếng Anh)</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>TLA101</td>
-						<td>
-						Kỹ thuật xây dựng công trình thủy</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>TLA104</td>
-						<td>
-						Kỹ thuật xây dựng</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>5</td>
-						<td>TLA111</td>
-						<td>
-						Công nghệ kỹ thuật xây dựng</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>6</td>
-						<td>TLA113</td>
-						<td>
-						Kỹ thuật xây dựng công trình giao thông</td>
-						<td><a href="UpdateMajo.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>7</td>
-						<td>TLA114</td>
-						<td>
-						Quản lý xây dựng</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>8</td>
-						<td>TLA102</td>
-						<td>
-						Kỹ thuật tài nguyên nước</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>9</td>
-						<td>TLA107</td>
-						<td>
-						Kỹ thuật cấp thoát nước</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>10</td>
-						<td>TLA110</td>
-						<td>
-						Kỹ thuật cơ sở hạ tầng</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>11</td>
-						<td>TLA103</td>
-						<td>
-						Thuỷ văn học</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
-					<tr>
-						<td>12</td>
-						<td>TLA109</td>
-						<td>
-						Kỹ thuật môi trường</td>
-						<td><a href="UpdateMajor.php">Cập Nhật</a></td>
-						<td><a href="#">Xóa</a></td>
-					</tr>
+				<?php
+					while ( $data = mysqli_fetch_array($query) ) {
+						$i = 1;
+						$id = $data['idMajor'];
+				?>
+				<tr>
+					<td><?php echo $i; ?></td>
+					<td><?php echo $id;?></td>
+					<td><?php echo $data['nameMajor']; ?></td>
+					<td>
+						<a href="changeMajor.php?id=<?php echo $id;?>">Sửa</a>
+					</td>
+					<td><a href="quanlynganhhoc.php?id_delete=<?php echo $id;?>">Xóa</a></td>
+				</tr>
+				<?php
+						$i++;
+					}
+				?>
 				</tbody>
 			</table>
 			<div class="pagination">
@@ -203,6 +170,12 @@
 	</footer>
 	<script src="../js/jquery-3.4.1.js" type="text/javascript"> </script>
 	<script src="../js/popper.min.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});
+	</script>
 	<script type="text/javascript">
 		$(document).ready(
 		function() {

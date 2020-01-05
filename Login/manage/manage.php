@@ -24,10 +24,26 @@
 					<div class="collapse navbar-collapse " id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="quanlynganhhoc.php">Quản Lý Ngành Học</a>
-							</li>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Quản Lý Ngành Học
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="quanlynganhhoc.php">Xem Ngành học</a>
+										<a class="dropdown-item" href="quanlymonhoc.php">Lớp Học Theo Ngành</a>
+										<a class="dropdown-item" href="monhoctheonganh.php">Tạo Lớp Học Theo Ngành</a>
+									</div>
+								</div>
 							<li class="nav-item">
-								<a class="nav-link" href="LopHocPhan.php">Lớp Học Phần</a>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Lớp Học Phần
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="lopmonhoc.php">Thông tin các lớp môn học</a>
+										<a class="dropdown-item" href="quanlythoigian.php">Thời Gian Học</a>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -40,10 +56,27 @@
 					<div class="collapse navbar-collapse content-right" id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="quanlygiangvien.php">Quản lý thông tin giảng viên</a>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Quản lý giảng viên
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="quanlygiangvien.php">Xem Giảng Viên</a>
+										<!-- <a class="dropdown-item" href="#"></a>
+										<a class="dropdown-item" href="#">Something else here</a> -->
+									</div>
+								</div>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="login.php">Đăng Xuất</a>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									...
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Profile</a>
+										<a class="dropdown-item" href="#">log-out</a>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -52,7 +85,7 @@
 		</div>
 	</nav>
 	<main>
-		<div class="container">
+		<!-- <div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-xl-4 banner-left">
 					<div class="box">
@@ -89,7 +122,7 @@
 					<div class="ft-text"> <a href="#">Xem Tất Cả</a></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</main>
 	<footer>
 		<div class="container bg-light">
@@ -103,5 +136,13 @@
 			</div>
 		</div>
 	</footer>
+	<script src="../js/jquery-3.4.1.js" title="text/javascript"></script>
+	<script src="../js/popper.min.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});
+	</script>
 </body>
 </html>
